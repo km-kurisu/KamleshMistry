@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kamlesh Mistry | Creative Developer Portfolio
 
-## Getting Started
+A premium, highly interactive portfolio website built with **Next.js 15**, **Tailwind CSS**, and **GSAP**. This project showcases a blend of clean engineering and creative design, featuring custom typography, smooth animations, and a fully responsive layout.
 
-First, run the development server:
+![Portfolio Preview](/public/Backdrop.png)
+
+## ✨ Key Features
+
+-   **Interactive UI**: Smooth scrolling with **Lenis** and custom cursor tracking.
+-   **Dynamic Animations**: Powered by **GSAP** (ScrollTrigger, Staggers, and Timelines).
+-   **Typography Focus**: Custom typeface integration using **Stardom-Regular** for display headings and **Melodrama-Variable** for body and highlight text.
+-   **Theme Switching**: Full support for Dark and Light modes with `next-themes`.
+-   **Responsive Design**: Optimized for all screen sizes, from mobile devices to 4K ultra-wide monitors.
+-   **Glassmorphism**: Elegant frosted-glass navigation and UI elements.
+
+## 🛠️ Tech Stack
+
+-   **Frontend**: [Next.js](https://nextjs.org/) (App Router), [React](https://react.dev/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Animations**: [GSAP](https://gsap.com/)
+-   **Smooth Scroll**: [Lenis](https://lenis.darkroom.engineering/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Components**: Custom-built with a focus on micro-interactions.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+-   Node.js 18+ 
+-   npm / yarn / pnpm
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/km-kurisu/KamleshMistry.git
+   cd KamleshMistry
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── public/          # Static assets (images, PDFs)
+├── src/
+│   ├── app/         # Next.js App Router (Layout, Pages, Globals)
+│   ├── components/  # Reusable UI components (Hero, Navbar, Navbar, etc.)
+│   └── fonts/       # Custom local font files
+├── tailwind.config.ts # Tailwind CSS configuration
+└── package.json     # Project dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The design system is built around a minimal aesthetic with a focus on editorial typography:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   **Display Font**: Stardom-Regular (Editorial, High-Contrast Serif)
+-   **Body/Highlight Font**: Melodrama-Variable (Modern, Elegant Sans)
+-   **Accent Colors**: Teal/Dark-Teal for subtle highlights in dark mode.
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+&copy; 2026 Kamlesh Mistry. All rights reserved.
+Built with ❤️ by Kamlesh Mistry.
