@@ -11,9 +11,10 @@ const stardom = localFont({
   display: "swap",
 });
 
-const array = localFont({
-  src: "../fonts/Array-Regular.otf",
-  variable: "--font-array",
+const melodrama = localFont({
+  src: "../fonts/melodrama/Melodrama-Variable.ttf",
+  variable: "--font-melo",
+  weight: "100 900",
   display: "swap",
 });
 
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${stardom.variable} ${array.variable} antialiased bg-background text-foreground`}
+        className={`${stardom.variable} ${melodrama.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"

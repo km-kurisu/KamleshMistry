@@ -56,27 +56,27 @@ export default function Projects() {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className="py-24 px-6 md:px-12 bg-background transition-colors duration-300">
-            <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tighter text-foreground">SELECTED WORKS</h2>
+        <section ref={containerRef} className="py-20 md:py-24 px-6 md:px-12 bg-background transition-colors duration-300 max-w-screen-2xl mx-auto">
+            <h2 className="text-3xl md:text-6xl font-bold mb-12 md:mb-16 tracking-tighter text-foreground font-display">SELECTED WORKS</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 {projects.map((project) => (
                     <div key={project.id} className="project-card group cursor-pointer">
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800 mb-4 transition-colors duration-300">
+                        <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800 mb-4 transition-colors duration-300 shadow-sm">
                             {/* Fallback to gray background if image fails loading or placehold with minimal style */}
                             <Image
                                 src={project.image}
                                 alt={project.title}
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                                className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                             />
                         </div>
                         <div className="flex justify-between items-start">
-                            <div>
-                                <h3 className="text-2xl font-bold group-hover:text-foreground/70 transition-colors text-foreground">{project.title}</h3>
-                                <p className="text-foreground/60 mt-1">{project.category}</p>
+                            <div className="pr-4">
+                                <h3 className="text-xl md:text-2xl font-highlightbold group-hover:text-foreground/70 transition-colors text-foreground">{project.title}</h3>
+                                <p className="text-foreground/60 mt-1 text-sm md:text-base">{project.category}</p>
                             </div>
-                            <span className="h-8 w-8 rounded-full border border-zinc-200 dark:border-white/20 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all text-foreground">
+                            <span className="h-8 w-8 rounded-full border border-zinc-200 dark:border-white/20 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all text-foreground shrink-0">
                                 ↗
                             </span>
                         </div>
