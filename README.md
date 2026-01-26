@@ -22,44 +22,6 @@ A premium, highly interactive portfolio website built with **Next.js 15**, **Tai
 -   **Icons**: [Lucide React](https://lucide.dev/)
 -   **Components**: Custom-built with a focus on micro-interactions.
 
-## 🚀 Getting Started
-
-### Prerequisites
-
--   Node.js 18+ 
--   npm / yarn / pnpm
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/km-kurisu/KamleshMistry.git
-   cd KamleshMistry
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## 📁 Project Structure
-
-```bash
-├── public/          # Static assets (images, PDFs)
-├── src/
-│   ├── app/         # Next.js App Router (Layout, Pages, Globals)
-│   ├── components/  # Reusable UI components (Hero, Navbar, Navbar, etc.)
-│   └── fonts/       # Custom local font files
-├── tailwind.config.ts # Tailwind CSS configuration
-└── package.json     # Project dependencies and scripts
-```
 
 ## 🎨 Design System
 
