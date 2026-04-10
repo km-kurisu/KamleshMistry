@@ -10,31 +10,31 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
     {
         id: 1,
-        title: "EcoTrack",
-        category: "Mobile App",
+        title: "BiblioTheca",
+        category: "BookStore and E-reader website",
         image: "/web1.png", // Using placeholders from existing assets if possible or generic
         description: "A sustainability tracking application built with React Native.",
     },
     {
         id: 2,
-        title: "Nebula Dashboard",
-        category: "Web Application",
+        title: "Fuji Simulator",
+        category: "Desktop Application",
         image: "/web2.png",
         description: "Analytics dashboard featuring real-time data visualization.",
     },
     {
         id: 3,
-        title: "Zenith UI",
-        category: "Design System",
+        title: "Stitch_SOC",
+        category: "SOC Tester Dashboard",
         image: "/web3.png",
-        description: "A comprehensive design system for enterprise applications.",
+        description: "A SOC Dashboard in testing phase.",
     },
     {
         id: 4,
-        title: "Pixel Perfect",
+        title: "Infinite Flappy",
         category: "Game Dev",
         image: "/web4.png",
-        description: "2D platformer game developed using Unity.",
+        description: "2D Flappy Bird developed using Unity.",
     },
 ];
 
