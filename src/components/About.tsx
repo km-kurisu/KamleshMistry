@@ -2,7 +2,7 @@
 
 export default function About() {
     const skills = [
-        "Next.js", "React", "Tailwind CSS", "GSAP", "Node.js", "TypeScript", "Digital Art"
+        "Next.js", "Linux", "Tailwind CSS", "CyberSecurity", "Unity", "Game Developement", "Node.js", "TypeScript", "Digital Art"
     ];
 
     return (
