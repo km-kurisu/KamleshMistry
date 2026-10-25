@@ -7,35 +7,65 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const projects = [
+type Project = {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  tech: string[];
+  image?: string;
+  gradient?: string;
+  href?: string;
+};
+
+const projects: Project[] = [
   {
     id: 1,
-    title: "BiblioTheca",
-    category: "BookStore and E-reader website",
-    image: "/bibliotheca_ss.png", // Using placeholders from existing assets if possible or generic
+    title: "AniCRM",
+    category: "Full-Stack CRM Platform",
     description:
-      "A sustainability tracking application built with React Native.",
+      "A creator agency CRM that unifies outreach, contracts, companies, brand deals, campaigns, and payments.",
+    tech: ["Next.js 16", "React 19", "Supabase", "PostgreSQL", "Clerk"],
+    gradient: "from-sky-500/15 via-transparent to-indigo-500/15",
+    href: "https://acrm-five.vercel.app/",
   },
   {
     id: 2,
-    title: "Fuji Simulator",
-    category: "Desktop Application",
-    image: "/fuji_ss.png",
-    description: "Analytics dashboard featuring real-time data visualization.",
+    title: "VitaScan AI",
+    category: "AI Health Screening",
+    description:
+      "A dual-pipeline screening architecture using blood biomarkers and Graph Attention Networks to predict nutritional deficiencies.",
+    tech: ["Python", "Graph Attention Networks", "Machine Learning"],
+    gradient: "from-emerald-500/15 via-transparent to-teal-500/15",
   },
   {
     id: 3,
-    title: "Stitch_SOC",
-    category: "SOC Tester Dashboard",
-    image: "/Stitch_SOC_ss.png",
-    description: "A SOC Dashboard in testing phase.",
+    title: "It's Behind You!",
+    category: "2D Horror Platformer",
+    description:
+      "An indie pixel-art horror platformer set in a dungeon, built around a pursuing ghost and an escape-focused gameplay loop.",
+    tech: ["Godot 4.7", "GDScript", "Pixel Art"],
+    gradient: "from-rose-500/15 via-transparent to-purple-500/15",
+    href: "https://itsbehindyou.netlify.app/",
   },
   {
     id: 4,
-    title: "Infinite Flappy",
-    category: "Game Dev",
-    image: "/web4.png",
-    description: "2D Flappy Bird developed using Unity.",
+    title: "Neobrutalism Playground",
+    category: "Open-Source UI Playground",
+    description:
+      "An interactive component and theme playground with live previews, published as an installable npm package.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "npm"],
+    gradient: "from-amber-500/15 via-transparent to-orange-500/15",
+    href: "https://neobrutalism-playground.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Bibliotheca V2",
+    category: "Full-Stack eBook Platform",
+    description:
+      "A full-stack eBook platform with in-browser EPUB reading, authentication, and a state-driven checkout flow.",
+    tech: ["Next.js 15", "React 19", "Supabase", "EPUB.js", "XState"],
+    image: "/bibliotheca_ss.png",
   },
 ];
 
@@ -69,32 +99,81 @@ export default function Projects() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card group cursor-pointer">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800 mb-4 transition-colors duration-300 shadow-sm">
-              {/* Fallback to gray background if image fails loading or placehold with minimal style */}
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
-              />
-            </div>
-            <div className="flex justify-between items-start">
-              <div className="pr-4">
-                <h3 className="text-xl md:text-2xl font-highlightbold group-hover:text-foreground/70 transition-colors text-foreground">
-                  {project.title}
-                </h3>
-                <p className="text-foreground/60 mt-1 text-sm md:text-base">
-                  {project.category}
-                </p>
+        {projects.map((project) => {
+          const content = (
+            <>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-900 mb-4 transition-colors duration-300 shadow-sm">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                  />
+                ) : (
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} transition-transform duration-700 group-hover:scale-105`}
+                  >
+                    <div className="h-full w-full flex flex-col items-center justify-center text-center px-8">
+                      <span className="text-[5rem] md:text-[6.5rem] font-display font-bold leading-none tracking-tighter text-foreground/10 select-none">
+                        {String(project.id).padStart(2, "0")}
+                      </span>
+                      <span className="mt-4 text-[10px] md:text-xs uppercase tracking-[0.3em] text-foreground/40 font-sans">
+                        {project.category}
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
-              <span className="h-8 w-8 rounded-full border border-zinc-200 dark:border-white/20 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all text-foreground shrink-0">
-                ↗
-              </span>
+
+              <div className="flex justify-between items-start gap-4">
+                <div className="pr-4">
+                  <h3 className="text-xl md:text-2xl font-highlightbold group-hover:text-foreground/70 transition-colors text-foreground">
+                    {project.title}
+                  </h3>
+                  <p className="text-foreground/60 mt-1 text-sm md:text-base">
+                    {project.category}
+                  </p>
+                  <p className="mt-2 text-foreground/50 text-sm leading-relaxed font-sans">
+                    {project.description}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {project.tech.map((item) => (
+                      <span
+                        key={item}
+                        className="px-2.5 py-1 rounded-full border border-zinc-200 dark:border-white/10 text-[10px] md:text-xs uppercase tracking-wider text-foreground/50 font-sans"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {project.href && (
+                  <span className="h-8 w-8 rounded-full border border-zinc-200 dark:border-white/20 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all text-foreground shrink-0">
+                    ↗
+                  </span>
+                )}
+              </div>
+            </>
+          );
+
+          return project.href ? (
+            <a
+              key={project.id}
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card group block cursor-pointer"
+            >
+              {content}
+            </a>
+          ) : (
+            <div key={project.id} className="project-card group">
+              {content}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
