@@ -9,8 +9,8 @@ export default function About() {
         <section className="py-24 px-6 md:px-12 border-t border-zinc-200 dark:border-white/10 transition-colors duration-300 max-w-screen-2xl mx-auto">
             <div className="flex flex-col md:flex-row gap-12 md:gap-24">
                 <div className="flex-1 w-full">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 tracking-tighter text-foreground font-display">ABOUT</h2>
-                    <p className="text-lg md:text-2xl leading-relaxed text-foreground/80 font-highlightwide">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 tracking-tighter text-foreground font-section-heading">ABOUT</h2>
+                    <p className="text-lg md:text-2xl leading-relaxed text-foreground/80 font-highlight">
                         I am a creative developer and designer with a passion for building
                         digital products that look great and perform even better.
                         I bridge the gap between design and engineering.
@@ -23,12 +23,12 @@ export default function About() {
                 </div>
 
                 <div className="flex-1 w-full">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 tracking-tighter text-foreground font-display">SKILLS</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 tracking-tighter text-foreground font-section-heading">SKILLS</h2>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                         {skills.map((skill) => (
                             <span
                                 key={skill}
-                                className="px-3 md:px-4 py-1.5 md:py-2 border border-zinc-200 dark:border-white/20 rounded-full text-xs md:text-base hover:bg-foreground hover:text-background transition-colors cursor-default text-foreground/80 font-highlightbold"
+                                className="px-3 md:px-4 py-1.5 md:py-2 border border-zinc-200 dark:border-white/20 rounded-full text-xs md:text-base hover:bg-foreground hover:text-background transition-colors cursor-default text-foreground/80 font-highlight"
                             >
                                 {skill}
                             </span>

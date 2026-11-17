@@ -48,17 +48,17 @@ export default function Hero() {
                         </h1>
                     </div>
                     <div className="overflow-hidden">
-                        <h1 className="hero-text text-[12vw] md:text-8xl lg:text-8xl font-highlightwide tracking-tighter leading-none text-foreground ml-1">
+                        <h1 className="hero-text text-[12vw] md:text-8xl lg:text-8xl font-melo tracking-tighter leading-none text-foreground ml-1">
                             CREATIVE
                         </h1>
                     </div>
                     <div className="overflow-hidden">
-                        <h1 className="hero-text text-[12vw] md:text-8xl lg:text-8xl font-highlightwide tracking-tighter leading-none text-foreground/50">
+                        <h1 className="hero-text text-[12vw] md:text-8xl lg:text-8xl font-melo tracking-tighter leading-none text-foreground/50">
                             DEVELOPER
                         </h1>
                     </div>
                     <div className="overflow-hidden">
-                        <h1 className="hero-text text-[12vw] md:text-8xl lg:text-8xl font-highlightboldwide tracking-tighter leading-none text-foreground">
+                        <h1 className="hero-text text-[12vw] md:text-8xl lg:text-8xl font-sansboldwide tracking-tighter leading-none text-foreground">
                             & ARTIST
                         </h1>
                     </div>

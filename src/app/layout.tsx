@@ -18,6 +18,27 @@ const melodrama = localFont({
   display: "swap",
 });
 
+const panchang = localFont({
+  src: "../fonts/panchang/Panchang-Variable.ttf",
+  variable: "--font-panchang",
+  weight: "200 800",
+  display: "swap",
+});
+
+const cabinetGrotesk = localFont({
+  src: "../fonts/cabinet/CabinetGrotesk-Variable.ttf",
+  variable: "--font-cabinet",
+  weight: "200 700",
+  display: "swap",
+});
+
+const boska = localFont({
+  src: "../fonts/boska/Boska-Variable.ttf",
+  variable: "--font-boska",
+  weight: "200 700",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Kamlesh Mistry | Portfolio",
   description: "Creative developer, designer, and artist.",
@@ -31,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${stardom.variable} ${melodrama.variable} antialiased bg-background text-foreground`}
+        className={`${stardom.variable} ${melodrama.variable} ${panchang.variable} ${cabinetGrotesk.variable} ${boska.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"

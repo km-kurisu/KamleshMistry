@@ -6,10 +6,10 @@ export default function Footer() {
     <footer className="py-16 md:py-24 px-6 md:px-12 border-t border-zinc-200 dark:border-white/10 transition-colors duration-300 max-w-screen-2xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-center md:items-center mb-16 md:mb-20 gap-8 text-center md:text-left">
         <div>
-          <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground font-display">
+          <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground font-section-heading">
             Let's Connect
           </h3>
-          <p className="text-foreground/60 font-sans">
+          <p className="text-foreground/60 font-hightlight">
             Open for opportunities and collaborations.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function Footer() {
 
       <div className="flex flex-col md:flex-row justify-between mt-8 text-sm text-foreground/50 pt-8 border-t border-zinc-200 dark:border-white/5 gap-4 md:gap-0 text-center md:text-left font-sans">
         <p>&copy; 2026 Kamlesh Mistry. All rights reserved.</p>
-        <p>Built with Next.js, Tailwind & GSAP.</p>
+        <p>Built with Next.js, Fontshare & Tailwind & GSAP.</p>
       </div>
     </footer>
   );

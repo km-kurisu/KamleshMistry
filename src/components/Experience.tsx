@@ -90,10 +90,10 @@ export default function Experience() {
       className="py-20 md:py-24 px-6 md:px-12 border-t border-zinc-200 dark:border-white/10 transition-colors duration-300 max-w-screen-2xl mx-auto"
     >
       <div className="mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-6xl font-bold tracking-tighter text-foreground font-display">
+        <h2 className="text-3xl md:text-6xl font-bold tracking-tighter text-foreground font-section-heading">
           EXPERIENCE
         </h2>
-        <p className="mt-4 text-base md:text-lg text-foreground/60 font-sans max-w-2xl leading-relaxed">
+        <p className="mt-4 text-base md:text-lg text-foreground/60 font-highlight max-w-2xl leading-relaxed">
           My professional journey, from my first internship to my current role.
         </p>
       </div>
@@ -121,21 +121,21 @@ export default function Experience() {
 
               <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between md:gap-8">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-highlightbold text-foreground">
+                  <h3 className="text-xl md:text-2xl font-melo text-foreground">
                     {job.role}
                   </h3>
-                  <p className="mt-1 text-sm md:text-base text-foreground/70 font-sans">
+                  <p className="mt-1 text-sm md:text-base text-foreground/70 font-highlight">
                     {job.company}
                     {job.location ? ` · ${job.location}` : ""}
                   </p>
                 </div>
 
                 <div className="flex items-center gap-3 md:flex-col md:items-end md:gap-2 md:text-right shrink-0">
-                  <span className="text-xs md:text-sm uppercase tracking-[0.15em] text-foreground/50 font-sans whitespace-nowrap">
+                  <span className="text-xs md:text-sm uppercase tracking-[0.15em] text-foreground/50 font-highlight whitespace-nowrap">
                     {job.period}
                   </span>
                   {job.current && (
-                    <span className="px-2.5 py-1 text-[10px] md:text-xs uppercase tracking-[0.15em] rounded-full bg-foreground text-background font-highlightbold">
+                    <span className="px-2.5 py-1 text-[10px] md:text-xs uppercase tracking-[0.15em] rounded-full bg-foreground text-background font-sans font-bold">
                       Ongoing
                     </span>
                   )}

@@ -94,7 +94,7 @@ export default function Projects() {
       ref={containerRef}
       className="py-20 md:py-24 px-6 md:px-12 bg-background transition-colors duration-300 max-w-screen-2xl mx-auto"
     >
-      <h2 className="text-3xl md:text-6xl font-bold mb-12 md:mb-16 tracking-tighter text-foreground font-display">
+      <h2 className="text-3xl md:text-6xl font-bold mb-12 md:mb-16 tracking-tighter text-foreground font-section-heading">
         SELECTED WORKS
       </h2>
 
